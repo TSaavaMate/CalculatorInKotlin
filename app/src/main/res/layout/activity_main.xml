@@ -50,123 +50,131 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
     <LinearLayout
         style="@style/Buttonrow">
-        <Button
-            style="@style/clearButton"
-            android:text="Clear"
-            android:backgroundTint="@color/grey">
-
-        </Button>
-        <Button
-            style="@style/divideButton"
-            android:text="/"
-            android:backgroundTint="@color/grey">
-
-        </Button>
+        <TextView
+            style="@style/divideandclearButton"
+            android:text="@string/clear"
+            android:onClick="cleaAction">
+        </TextView>
+        <TextView
+            style="@style/divideandclearButton"
+            android:text="@string/divide"
+            android:onClick="divideAction">
+        </TextView>
 
 
     </LinearLayout>
     <LinearLayout
         style="@style/Buttonrow">
-        <Button
+        <TextView
+            android:id="@+id/Button7"
             style="@style/Buttonnumber"
-            android:text="7">
+            android:text="@string/_7">
 
-        </Button>
-        <Button
+        </TextView>
+        <TextView
+            android:id="@+id/Button8"
             style="@style/Buttonnumber"
-            android:text="8">
-
-        </Button>
-        <Button
+            android:text="@string/_8">
+        </TextView>
+        <TextView
+            android:id="@+id/Button9"
             style="@style/Buttonnumber"
-            android:text="9">
+            android:text="@string/_9">
 
-        </Button>
-        <Button
-            style="@style/multiplyButton"
-            android:text="*"
-            android:backgroundTint="@color/second_grey">
+        </TextView>
+        <TextView
+            style="@style/operatorButton"
+            android:text="@string/multiply"
+            android:onClick="multiplyAction">
 
 
-        </Button>
+        </TextView>
 
     </LinearLayout>
     <LinearLayout
         style="@style/Buttonrow">
-        <Button
+        <TextView
+            android:id="@+id/Button4"
             style="@style/Buttonnumber"
-            android:text="4">
+            android:text="@string/_4">
 
-        </Button>
-        <Button
+        </TextView>
+        <TextView
+            android:id="@+id/Button5"
             style="@style/Buttonnumber"
-            android:text="5">
+            android:text="@string/_5">
 
-        </Button>
-        <Button
+        </TextView>
+        <TextView
+            android:id="@+id/Button6"
             style="@style/Buttonnumber"
-            android:text="6">
+            android:text="@string/_6">
 
-        </Button>
-        <Button
-            style="@style/minusButton"
-            android:text="-"
-            android:backgroundTint="@color/second_grey">
+        </TextView>
+        <TextView
+            style="@style/operatorButton"
+            android:text="@string/minus"
+            android:onClick="minusAction">
 
 
 
-        </Button>
+        </TextView>
 
     </LinearLayout>
     <LinearLayout
         style="@style/Buttonrow">
-        <Button
+        <TextView
+            android:id="@+id/Button1"
             style="@style/Buttonnumber"
-            android:text="1">
+            android:text="@string/_1">
 
-        </Button>
-        <Button
+        </TextView>
+        <TextView
+            android:id="@+id/Button2"
             style="@style/Buttonnumber"
-            android:text="2">
+            android:text="@string/_2">
 
-        </Button>
-        <Button
+        </TextView>
+        <TextView
+            android:id="@+id/Button3"
             style="@style/Buttonnumber"
-            android:text="3">
+            android:text="@string/_3">
 
-        </Button>
-        <Button
-            style="@style/plusButton"
-            android:text="+"
-            android:backgroundTint="@color/second_grey">
+        </TextView>
+        <TextView
+            style="@style/operatorButton"
+            android:text="@string/plus"
+            android:backgroundTint="@color/second_grey"
+            android:onClick="plusaction">
 
-        </Button>
+        </TextView>
 
     </LinearLayout>
     <LinearLayout
         style="@style/Buttonrow">
-        <Button
+        <TextView
             style="@style/Buttonnumber"
-            android:text=".">
+            android:text="@string/dot">
 
-        </Button>
-        <Button
+        </TextView>
+        <TextView
             style="@style/Buttonnumber"
-            android:text="0">
+            android:text="@string/_0">
 
-        </Button>
-        <Button
+        </TextView>
+        <TextView
             style="@style/Buttonnumber"
-            android:text="Del">
+            android:text="@string/del"
+            android:onClick="delAction">
 
-        </Button>
-        <Button
+        </TextView>
+        <TextView
             style="@style/EqualButton"
-            android:text="="
-            android:backgroundTint="@color/red"
+            android:text="@string/equal"
+            android:onClick="equalaction"
             >
 
-        </Button>
+        </TextView>
 
     </LinearLayout>
 
