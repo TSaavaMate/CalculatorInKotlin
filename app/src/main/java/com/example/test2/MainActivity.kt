@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
+import net.objecthunter.exp4j.ExpressionBuilder
+
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,19 +39,15 @@ class MainActivity : AppCompatActivity() {
         Button9.setOnClickListener {
             evaluateExpression("9", clear = true)
         }
-
-
     }
     fun plusaction(clickedView: View) {
         evaluateExpression("+", clear = true)
     }
-
-    fun equalaction(clickedView: View) {}
     fun cleaAction(clickedView: View) {
         workingsTv.text =""
         resultsTv.text =""
     }
-    fun divideAction(View: View) {
+    fun divideAction(clickedView: View) {
         evaluateExpression("/", clear = true)
     }
     fun multiplyAction(clickedView: View) {
@@ -62,7 +61,18 @@ class MainActivity : AppCompatActivity() {
         if(length>0)
             workingsTv.text =workingsTv.text.subSequence(0,length-1)
     }
-    fun evaluateExpression(string: String, clear: Boolean) {
+    fun equalaction(clickedView: View) {
+        val text = workingsTv.text.toString()
+        val expression = ExpressionBuilder(text).build()
+        val result = expression.evaluate()
+        val longResult = result.toLong()
+        if (result == longResult.toDouble()) {
+            resultsTv.text = longResult.toString()
+        } else {
+            resultsTv.text = result.toString()
+        }
+    }
+    private fun evaluateExpression(string: String, clear: Boolean) {
         if(clear) {
             resultsTv.text = ""
             workingsTv.append(string)

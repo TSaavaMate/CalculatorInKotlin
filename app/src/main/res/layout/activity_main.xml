@@ -109,7 +109,6 @@
             android:id="@+id/Button6"
             style="@style/Buttonnumber"
             android:text="@string/_6">
-
         </TextView>
         <TextView
             style="@style/operatorButton"
