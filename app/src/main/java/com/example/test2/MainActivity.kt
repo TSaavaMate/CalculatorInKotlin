@@ -67,9 +67,9 @@ class MainActivity : AppCompatActivity() {
         val result = expression.evaluate()
         val longResult = result.toLong()
         if (result == longResult.toDouble()) {
-            resultsTv.text = longResult.toString()
+            resultsTv.text = longResult.toDouble().toString()
         } else {
-            resultsTv.text = result.toString()
+            resultsTv.text = result.toDouble().toString()
         }
     }
     private fun evaluateExpression(string: String, clear: Boolean) {
