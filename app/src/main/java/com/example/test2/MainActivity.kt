@@ -39,6 +39,13 @@ class MainActivity : AppCompatActivity() {
         Button9.setOnClickListener {
             evaluateExpression("9", clear = true)
         }
+        dot.setOnClickListener {
+            evaluateExpression(".",clear = true)
+        }
+        zero.setOnClickListener {
+            evaluateExpression("0",clear = true)
+        }
+
     }
     fun plusaction(clickedView: View) {
         evaluateExpression("+", clear = true)

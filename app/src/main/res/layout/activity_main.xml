@@ -152,11 +152,13 @@
     <LinearLayout
         style="@style/Buttonrow">
         <TextView
+            android:id="@+id/dot"
             style="@style/Buttonnumber"
             android:text="@string/dot">
 
         </TextView>
         <TextView
+            android:id="@+id/zero"
             style="@style/Buttonnumber"
             android:text="@string/_0">
 
